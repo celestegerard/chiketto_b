@@ -8,6 +8,10 @@ class PrizesController < ApplicationController
     @prize = Prize.new
   end
 
+  def edit
+  @prize = Prize.find(params[:id])
+end
+
   def create
     @prize = Prize.new(prize_params)
 
@@ -21,6 +25,16 @@ class PrizesController < ApplicationController
   def show
     @prize = Prize.find(params[:id])
   end
+
+  def update
+  @prize = Prize.find(params[:id])
+
+  if @prize.update(prize_params)
+    redirect_to @prize
+  else
+    render 'edit'
+  end
+end
 
   private
   def prize_params
