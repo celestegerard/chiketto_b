@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   get 'welcome/index'
 
-  post 'prizes/new'
-
   resources :prizes
 
   root 'welcome#index'
