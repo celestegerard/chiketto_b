@@ -1,14 +1,25 @@
 class PrizesController < ApplicationController
 
+  def index
+    @prizes = Prize.all
+  end
+
   def new
+    @prize = Prize.new
   end
 
   def create
-    
     @prize = Prize.new(prize_params)
 
-  @prize.save
-  redirect_to @prize
+    if @prize.save
+      redirect_to @prize
+    else
+      render 'new'
+    end
+  end
+
+  def show
+    @prize = Prize.find(params[:id])
   end
 
   private

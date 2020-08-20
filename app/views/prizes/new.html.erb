@@ -1,5 +1,20 @@
 
 <%= form_with scope: :prize, url: prizes_path, local: true do |form| %>
+
+<% if @prize.errors.any? %>
+<div id="error explanation">
+  <h2>
+    <% pluralize(@prize.errors.count, "error") %> prohibited this article from being saved:
+    </h2>
+    <ul>
+      <% @prize.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+      </ul>
+      </div>
+      <% end %>
+      </ul>
+      </div>
   <p>
     <%= form.label :title %><br>
     <%= form.text_field :title %>
@@ -13,4 +28,7 @@
   <p>
     <%= form.submit %>
   </p>
+
+  <%= link_to 'Back', prizes_path %>
+
 <% end %>
