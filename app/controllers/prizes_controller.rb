@@ -47,7 +47,7 @@ end
 
   private
   def prize_params
-    params.require(:prize).permit(:title, :text)
+    params.require(:prize).permit(:title, :text, :prizeimage)
   end
 
 end
