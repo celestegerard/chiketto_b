@@ -1,9 +1,9 @@
 class PrizesController < ApplicationController
 
-  http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show]
 
   def index
     @prizes = Prize.all
+    render json: @prizes
   end
 
   def new
@@ -18,6 +18,7 @@ end
     @prize = Prize.new(prize_params)
 
     if @prize.save
+      render json: @prize
       redirect_to @prize
     else
       render 'new'
