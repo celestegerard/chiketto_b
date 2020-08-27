@@ -1,8 +1,11 @@
 class PrizesController < ApplicationController
 
 
+
   def index
     @prizes = Prize.all
+    # @prizes = Prize.with_attached_image.all
+  # render json: @prizes.with_attached_image
     render json: @prizes
   end
 
@@ -27,6 +30,7 @@ end
 
   def show
     @prize = Prize.find(params[:id])
+    render json: @prizes
   end
 
   def update
