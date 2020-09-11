@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
   root 'welcome#index'
 
-  get 'user/index'
+  resources :users
 
   resources :prizes do
     resources :comments
