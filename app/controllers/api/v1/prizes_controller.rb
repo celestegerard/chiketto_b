@@ -1,11 +1,8 @@
-class PrizesController < ApplicationController
-
-
+class Api::V1::PrizesController < ApplicationController
 
   def index
-    @prizes = Prize.all
-    # @prizes = Prize.with_attached_image.all
-  # render json: @prizes.with_attached_image
+    # @prizes = Prize.all
+    @prizes = Prize.with_attached_prizeimage.all
     render json: @prizes
   end
 
@@ -21,7 +18,7 @@ end
     @prize = Prize.new(prize_params)
 
     if @prize.save
-      render json: @prize
+      # render json: @prize
       redirect_to @prize
     else
       render 'new'
@@ -30,7 +27,7 @@ end
 
   def show
     @prize = Prize.find(params[:id])
-    render json: @prizes
+    # render json: @prizes
   end
 
   def update
@@ -52,7 +49,7 @@ end
 
   private
   def prize_params
-    params.require(:prize).permit(:title, :text, :prizeimage)
+    params.require(:prize).permit(:title, :price, :prizeimage)
   end
 
 end

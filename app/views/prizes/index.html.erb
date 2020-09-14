@@ -11,7 +11,7 @@
   <% @prizes.each do |prize| %>
     <tr>
       <td><%= prize.title %></td>
-      <td><%= prize.text %></td>
+      <td><%= prize.price %></td>
       <td><%= link_to 'Show', prize_path(prize) %></td>
       <td><%= link_to 'Edit', edit_prize_path(prize) %></td>
       <td><%= link_to 'Destroy', prize_path(prize),
