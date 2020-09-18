@@ -8,6 +8,12 @@ Rails.application.routes.draw do
     end
   end
 
+  namespace :api do
+    namespace :v1 do
+      resources :users
+    end
+  end
+
   default_url_options :host => "http://localhost:3000"
 
   get 'welcome/index'
