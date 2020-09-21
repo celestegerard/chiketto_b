@@ -27,7 +27,7 @@ end
 
   def show
     @prize = Prize.find(params[:id])
-    # render json: @prizes
+    render json: @prizes
   end
 
   def update
