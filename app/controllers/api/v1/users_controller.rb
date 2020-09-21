@@ -5,11 +5,9 @@ class Api::V1::UsersController < ApplicationController
     render json: @users
   end
 
-  # def show
-  #   @user = User.find(params[:id])
-  #   render json: @users
-  # end
-
+  def create
+    @User = User.create(post_params)
+  end
 
 
 end
