@@ -1,3 +1,4 @@
+module V1
 Rails.application.routes.draw do
 
   namespace :api do
@@ -21,5 +22,5 @@ Rails.application.routes.draw do
 
   resources :users
 
-
+end
 end
