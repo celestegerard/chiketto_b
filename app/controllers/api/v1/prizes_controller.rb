@@ -1,6 +1,7 @@
 class Api::V1::PrizesController < ApplicationController
 
   def index
+    # @prizes = Prize.all
     @prizes = Prize.with_attached_prizeimage.all
     render json: @prizes
   end
