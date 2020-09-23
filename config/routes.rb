@@ -1,4 +1,4 @@
-module V1
+
 Rails.application.routes.draw do
 
   namespace :api do
@@ -20,7 +20,5 @@ Rails.application.routes.draw do
   get 'welcome/index'
   root 'welcome#index'
 
-  resources :users
 
-end
 end

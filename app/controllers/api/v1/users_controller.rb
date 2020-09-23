@@ -1,10 +1,9 @@
 
 class Api::V1::UsersController < ApplicationController
 
-  skip_before_action :verify_authenticity_token
+  # skip_before_action :verify_authenticity_token
 
   def index
-    # @prizes = Prize.all
     @users = User.with_attached_avatar.all
     render json: @users
   end
@@ -24,7 +23,6 @@ end
     puts @user.errors.full_messages
 
     if @user.save
-      # render json: @prize
       redirect_to users_path
     else
       render 'new'
@@ -55,7 +53,7 @@ end
 
 private
   def user_params
-    params.permit(:name, :avatar, :count, :id, :user)
+    params.permit(:name, :avatar, :count, :id)
   end
 
 end
