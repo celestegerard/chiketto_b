@@ -23,7 +23,7 @@ end
     puts @user.errors.full_messages
 
     if @user.save
-      redirect_to users_path
+      redirect_to @user
     else
       render 'new'
     end
