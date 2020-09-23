@@ -53,7 +53,7 @@ end
 
 private
   def user_params
-    params.permit(:name, :avatar, :count, :id)
+    params.require(:user).permit(:name, :avatar, :price, :id)
   end
 
 end
