@@ -43,7 +43,6 @@ def destroy
   @prize = Prize.find(params[:id])
   @prize.destroy
 
-  redirect_to prizes_path
 end
 
   private

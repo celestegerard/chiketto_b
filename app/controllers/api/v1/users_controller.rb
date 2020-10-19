@@ -21,8 +21,7 @@ end
     puts @user.errors.full_messages
 
     if @user.save
-      # @user = User.new(user_params)
-      redirect_to @user
+      render json: @users
     else
       render 'new'
     end
