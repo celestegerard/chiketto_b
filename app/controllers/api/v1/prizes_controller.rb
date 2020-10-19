@@ -18,8 +18,7 @@ end
     @prize = Prize.new(prize_params)
 
     if @prize.save
-      # render json: @prize
-      redirect_to @prize
+        render json: @prizes
     else
       render 'new'
     end
@@ -34,7 +33,7 @@ end
   @prize = Prize.find(params[:id])
 
   if @prize.update(prize_params)
-    redirect_to @prize
+    render json: @prizes
   else
     render 'edit'
   end
@@ -49,7 +48,7 @@ end
 
   private
   def prize_params
-    params.permit(:title, :price, :prizeimage)
+    params.permit(:title, :price, :prizeimage, :prize)
   end
 
 end

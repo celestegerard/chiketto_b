@@ -21,6 +21,7 @@ end
     puts @user.errors.full_messages
 
     if @user.save
+      # @user = User.new(user_params)
       redirect_to @user
     else
       render 'new'
@@ -36,7 +37,8 @@ end
   @user = User.find(params[:id])
 
   if @user.update(user_params)
-    redirect_to @user
+    @user = User.find(params[:id])
+    render json: @users
   else
     render 'edit'
   end
@@ -51,7 +53,7 @@ end
 
 private
   def user_params
-    params.permit( :name, :avatar, :count, :id )
+    params.permit( :name, :avatar, :count, :id, :user )
   end
 
 end
