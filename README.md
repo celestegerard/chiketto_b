@@ -1,5 +1,4 @@
 # Twinkle API
----------------------------------------------------------------------------
 
 A kid’s app for parents to encourage positive behaviors.
 
@@ -10,6 +9,6 @@ A kid’s app for parents to encourage positive behaviors.
 * User tested by families as part of the QA process
 
 * Ruby version 2.7.0
-* Run ~rails s~ to start application
+* Run *rails s* to start application
 
 
