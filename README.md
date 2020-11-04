@@ -1,24 +1,15 @@
-# Chiketto API
+# Twinkle API
+---------------------------------------------------------------------------
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A kid’s app for parents to encourage positive behaviors.
 
-Things you may want to cover:
+* Designed and prototyped user interface in Figma
+* Employed Ruby on Rails, Rails API to store data
+* Utilized React, Javascript to create user interface
+* Dynamically styled with CSS to improve UI/UX
+* User tested by families as part of the QA process
 
-* Ruby version
+* Ruby version 2.7.0
+* Run ~rails s~ to start application
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
