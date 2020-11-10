@@ -2,10 +2,10 @@
 
 one:
   name: MyString
-  id: 1
+  googleid: 1
   avatar: MyString
 
 two:
   name: MyString
-  id: 1
+  googleid: 1
   avatar: MyString
