@@ -8,6 +8,7 @@ class Api::V1::PrizesController < ApplicationController
 
   def new
     @prize = Prize.new
+    render json: @prizes
   end
 
   def edit
