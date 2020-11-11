@@ -8,6 +8,7 @@ class Api::V1::UsersController < ApplicationController
 
   def new
     @user = User.new
+    render json: @users
   end
 
   def edit
