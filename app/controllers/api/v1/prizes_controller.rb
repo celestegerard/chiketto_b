@@ -22,6 +22,7 @@ end
         render json: @prizes
     else
       render 'new'
+      render json: @prizes
     end
   end
 
@@ -48,7 +49,7 @@ end
 
   private
   def prize_params
-    params.permit(:title, :price, :prizeimage, :prize)
+    params.permit(:title, :price, :prizeimage, :prize, :parent_id)
   end
 
 end

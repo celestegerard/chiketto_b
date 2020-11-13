@@ -25,6 +25,7 @@ end
       render json: @users
     else
       render 'new'
+      render json: @users
     end
   end
 
@@ -52,7 +53,7 @@ end
 
 private
   def user_params
-    params.permit( :name, :avatar, :count, :id, :user )
+    params.permit( :name, :avatar, :count, :id, :parent_id, :user)
   end
 
 end
