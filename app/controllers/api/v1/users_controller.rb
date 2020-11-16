@@ -8,7 +8,6 @@ class Api::V1::UsersController < ApplicationController
 
   def new
     @user = User.new
-    render json: @users
   end
 
   def edit
@@ -25,7 +24,6 @@ end
       render json: @users
     else
       render 'new'
-      render json: @users
     end
   end
 
@@ -53,7 +51,7 @@ end
 
 private
   def user_params
-    params.permit( :name, :avatar, :count, :id, :parent_id, :user)
+    params.permit( :name, :avatar, :count, :id, :user, :parent_id)
   end
 
 end
