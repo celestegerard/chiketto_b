@@ -51,7 +51,7 @@ end
 
 private
   def user_params
-    params.permit( :name, :avatar, :count, :id, :user, :parent_id)
+    params.permit( :name, :avatar, :count, :id, :parent_id, :user)
   end
 
 end
