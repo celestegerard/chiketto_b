@@ -15,7 +15,7 @@ class Api::V1::UsersController < ApplicationController
 end
 
   def create
-    @user = User.new(user_params)
+    @user = User.new
 
     @user.errors.empty?
     puts @user.errors.full_messages
@@ -51,7 +51,7 @@ end
 
 private
   def user_params
-    params.permit( :name, :avatar, :count, :id, :parent_id, :user)
+    params.permit( :name, :avatar, :count, :id, :user)
   end
 
 end

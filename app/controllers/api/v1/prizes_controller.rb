@@ -49,7 +49,7 @@ end
 
   private
   def prize_params
-    params.permit(:title, :price, :prizeimage, :prize, :parent_id)
+    params.permit(:title, :price, :prizeimage, :prize)
   end
 
 end
