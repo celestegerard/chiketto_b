@@ -46,12 +46,11 @@ end
 def destroy
   @user = User.find(params[:id])
   @user.destroy
-
 end
 
 private
   def user_params
-    params.permit( :name, :avatar, :count, :id, :user, :parent_id)
+    params.permit( :name, :avatar, :count, :id, :users, :user, :parent_id)
   end
 
 end
