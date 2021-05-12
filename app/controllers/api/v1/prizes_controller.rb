@@ -21,8 +21,8 @@ end
     if @prize.save
         render json: @prizes
     else
-      render 'new'
       render json: @prizes
+      render 'new'
     end
   end
 
