@@ -20,7 +20,6 @@ end
 
     if @prize.save
         render json: @prizes
-        # redirect_to prizes_path
     else
       render 'new'
     end
