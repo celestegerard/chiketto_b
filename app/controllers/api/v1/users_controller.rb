@@ -15,7 +15,7 @@ class Api::V1::UsersController < ApplicationController
 end
 
   def create
-    @user = User.new
+    @user = User.new(user_params)
 
     @user.errors.empty?
     puts @user.errors.full_messages
