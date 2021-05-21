@@ -15,7 +15,7 @@ class Api::V1::ParentsController < ApplicationController
 end
 
   def create
-    @parent = Parent.new
+    @parent = Parent.new(parent_params)
 
     @parent.errors.empty?
     puts @parent.errors.full_messages
